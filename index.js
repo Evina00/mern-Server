@@ -21,7 +21,11 @@ mongoose
 // middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://mern-client-4a70.onrender.com/",
+  })
+);
 
 app.use("/api/user", authRoute);
 // course route應該被jwt保護
