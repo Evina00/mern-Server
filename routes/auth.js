@@ -9,11 +9,11 @@ router.use((req, res, next) => {
   next();
 });
 
-router.get("/testAPI", (req, res) => {
+router.get("api/testAPI", (req, res) => {
   return res.send("成功連結auth route...");
 });
 
-router.post("/register", async (req, res) => {
+router.post("api/register", async (req, res) => {
   // 確認數據是否符合規範
   let { error } = registerValidation(req.body);
   if (error) return res.status(400).send(error.details[0].message);
@@ -36,7 +36,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
-router.post("/login", async (req, res) => {
+router.post("api/login", async (req, res) => {
   //確認數據是否符合規範
   let { error } = loginValidation(req.body);
   if (error) return res.status(400).send(error.details[0].message);
