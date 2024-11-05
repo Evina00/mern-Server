@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "https://mern-client-4a70.onrender.com/",
+    origin: "https://mern-client-4a70.onrender.com",
   })
 );
 
